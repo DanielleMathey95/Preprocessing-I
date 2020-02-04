@@ -56,3 +56,80 @@ table {
 html, body {
 		height: 100%;
 }
+
+@box-color: #DAD7D7;
+@head-text: 40px;
+@div: flex;
+@nav-color:  #5F5F5F;
+
+.top-section {
+	background-color: @box-color;
+	margin-left: 20%;
+	margin-right:20%;
+	margin-bottom: 1%;
+	padding-bottom: 1%;
+
+		.name {
+				font-size: @head-text;
+				margin-bottom: 1%;
+
+		}
+}
+
+.quote {
+	font-size: 18px;
+}
+
+button {
+	margin-top: 2%;
+}
+
+.image-section {
+	display: @div;
+	width: 65%;
+	height: 65%;
+	
+
+		img {
+			display: @div;
+			margin-left: 20%;
+			margin-right: 20%;
+			margin-top: 1%;
+			margin-bottom: 1%;
+		}
+}
+
+.navbar {
+	display: @div;
+	justify-content: flex-end;
+	margin-left: 20%;
+	margin-right:20%;
+	padding: 1%;
+
+		.nav-link {
+			text-decoration: none;
+			justify-content: space-evenly;
+			color: @nav-color;
+		}
+}
+
+.big-div {
+	display: @div;
+	justify-content: space-evenly;
+	margin-right: 20%;
+	margin-left: 20%;
+	padding-top: 1%;
+	border: 1px solid red;
+}
+
+.text-div {
+	display: @div;
+	padding: 1%;
+	margin-right: 20%;
+
+	.listen-up {
+		display: @div;
+		font-size: 30px;
+
+	}
+}
