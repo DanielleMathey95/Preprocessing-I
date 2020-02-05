@@ -57,22 +57,30 @@ html, body {
 		height: 100%;
 }
 
+//Variables
 @box-color: #DAD7D7;
 @head-text: 40px;
 @div: flex;
 @nav-color:  #5F5F5F;
 
+//Mix-Ins
+
+.margin (@space) {
+	margin-left:@space;
+	margin-right:@space;
+}
+
+//Code Start
 .top-section {
 	background-color: @box-color;
-	margin-left: 20%;
-	margin-right:20%;
+	.margin(20%);
 	margin-bottom: 1%;
 	padding-bottom: 1%;
 
 		.name {
 				font-size: @head-text;
 				margin-bottom: 1%;
-
+				
 		}
 }
 
@@ -92,8 +100,7 @@ button {
 
 		img {
 			display: @div;
-			margin-left: 20%;
-			margin-right: 20%;
+			.margin(20%);
 			margin-top: 1%;
 			margin-bottom: 1%;
 		}
@@ -102,34 +109,86 @@ button {
 .navbar {
 	display: @div;
 	justify-content: flex-end;
-	margin-left: 20%;
-	margin-right:20%;
+	.margin(20%);
 	padding: 1%;
 
 		.nav-link {
 			text-decoration: none;
-			justify-content: space-evenly;
 			color: @nav-color;
 		}
 }
 
 .big-div {
 	display: @div;
-	justify-content: space-evenly;
-	margin-right: 20%;
-	margin-left: 20%;
+	justify-content: space-between;
+	.margin(20%);
 	padding-top: 1%;
-	border: 1px solid red;
 }
 
 .text-div {
 	display: @div;
-	padding: 1%;
-	margin-right: 20%;
-
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 48%;
+	
 	.listen-up {
 		display: @div;
+		padding-top: 5%;
+		flex-wrap: wrap;
 		font-size: 30px;
+	}
+}
 
+.listen-text {
+	font-size: 18px;
+}
+
+.skills {
+	display: @div;
+	flex-wrap: wrap;
+	width: 48%;
+	padding: 5%;
+  
+	.skills-head {
+		font-size: 30px;
+	}
+}
+
+.skills-item {
+	font-size: 20px;
+	line-height: 30px;
+	border: 1px solid @box-color;
+}
+
+.work-history {
+	width: 65%;
+	.margin(20%);
+	
+	
+			h2 {
+				font-size: 30px;
+		}
+}
+
+.work-history table {
+	width: 100%;
+	margin-top: 5%;
+
+		tr {
+			border: 1px solid @box-color;
+			background-color: white;
+			height: 40px;
+			text-align: left;
+		}
+
+}
+
+@media only screen and (max-width:500px) {
+
+	body {
+		background-color: @nav-color;
+	}
+	.nav-link {
+		text-align: center;
 	}
 }
